@@ -211,6 +211,7 @@ Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki aku
 
 + Presisi, Recall, F1-Score
 - Logistic Regression
+
               precision    recall  f1-score   support
 
        Anger       0.90      0.67      0.77       675
@@ -224,6 +225,7 @@ Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki aku
 weighted avg       0.83      0.82      0.82      5305
 
 - SVM
+
               precision    recall  f1-score   support
 
        Anger       0.98      0.95      0.97       675
@@ -237,6 +239,7 @@ weighted avg       0.83      0.82      0.82      5305
 weighted avg       0.97      0.97      0.97      5305
 
 - LTSM
+
               precision    recall  f1-score   support
 
            0       0.98      0.98      0.98       675
