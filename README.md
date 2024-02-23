@@ -220,10 +220,6 @@ Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki aku
         Love       0.87      0.62      0.72       800
      Sadness       0.79      0.90      0.84      1185
 
-    accuracy                           0.82      5305
-   macro avg       0.84      0.78      0.80      5305
-weighted avg       0.83      0.82      0.82      5305
-
 - SVM
 
               precision    recall  f1-score   support
@@ -233,10 +229,6 @@ weighted avg       0.83      0.82      0.82      5305
        Happy       0.97      0.99      0.98      1753
         Love       0.98      0.94      0.96       800
      Sadness       0.96      0.99      0.97      1185
-
-    accuracy                           0.97      5305
-   macro avg       0.98      0.97      0.97      5305
-weighted avg       0.97      0.97      0.97      5305
 
 - LTSM
 
