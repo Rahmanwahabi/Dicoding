@@ -162,7 +162,7 @@ Proses improvement ini dilakukan untuk meningkatkan performa model LSTM dalam me
 
 <br>
 
-<div><img src="https://i.ibb.co/HhRvybW/download.png" width="1000"/></div>
+<div><img src="https://i.ibb.co/HhRvybW/download.png" width="300"/></div>
 
 <br>
 
