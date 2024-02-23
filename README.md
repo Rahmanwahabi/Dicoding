@@ -1,4 +1,4 @@
-# Proyek Pertama House Rental Price Prediction
+# Proyek Pertama
 
 #### Disusun oleh : Rahman Wahabi Hasibuan
 
