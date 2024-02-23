@@ -209,6 +209,55 @@ Berikut hasil evaluasi pada proyek ini :
 
 Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki akurasi lebih tinggi tinggi dibandingkan algoritma lainnya dalam proyek ini.
 
++ Presisi, Recall, F1-Score
+- Logistic Regression
+              precision    recall  f1-score   support
+
+       Anger       0.90      0.67      0.77       675
+        Fear       0.81      0.76      0.78       892
+       Happy       0.81      0.95      0.87      1753
+        Love       0.87      0.62      0.72       800
+     Sadness       0.79      0.90      0.84      1185
+
+    accuracy                           0.82      5305
+   macro avg       0.84      0.78      0.80      5305
+weighted avg       0.83      0.82      0.82      5305
+
+- SVM
+              precision    recall  f1-score   support
+
+       Anger       0.98      0.95      0.97       675
+        Fear       0.98      0.97      0.98       892
+       Happy       0.97      0.99      0.98      1753
+        Love       0.98      0.94      0.96       800
+     Sadness       0.96      0.99      0.97      1185
+
+    accuracy                           0.97      5305
+   macro avg       0.98      0.97      0.97      5305
+weighted avg       0.97      0.97      0.97      5305
+
+- LTSM
+              precision    recall  f1-score   support
+
+           0       0.98      0.98      0.98       675
+           1       0.99      0.96      0.97       892
+           2       0.99      0.99      0.99      1753
+           3       0.99      0.97      0.98       800
+           4       0.96      0.99      0.98      1185
+
+    accuracy                           0.98      5305
+   macro avg       0.98      0.98      0.98      5305
+weighted avg       0.98      0.98      0.98      5305
+
+Dari hasil evaluasi di atas, dapat disimpulkan beberapa hal:
+
+1. Akurasi Model: Model LSTM memiliki akurasi tertinggi yaitu 0.98, diikuti oleh SVM dengan akurasi 0.97, dan Logistic Regression dengan akurasi 0.82. Hal ini menunjukkan bahwa model LSTM lebih baik dalam melakukan klasifikasi emosi pada data review pelanggan dibandingkan dengan model lainnya.
+
+2. Presisi, Recall, F1-Score:
+- Logistic Regression: Presisi tertinggi untuk kelas Happy (0.81), Recall tertinggi untuk kelas Love (0.87), dan F1-Score tertinggi untuk kelas Happy (0.87).
+- SVM: Presisi tertinggi untuk kelas Happy (0.97), Recall tertinggi untuk kelas Sadness (0.99), dan F1-Score tertinggi untuk kelas Fear (0.98).
+- LSTM: Presisi, Recall, dan F1-Score tertinggi untuk semua kelas (0.98), menunjukkan kemampuan yang sangat baik dalam mengklasifikasikan setiap kelas emosi.
+
 Referensi:  
   [1]    
   [Fadjeri A, Hidayat K, Handayani DR. Deteksi Emosi pada Teks menggunakan Algoritma Naïve Bayes. J Ris Teknol dan Komput. 2021;1(2):1-4. doi:10.53863/juristik.v1i02.365.](https://jurnal.umk.ac.id/index.php/simet/article/view/3487)
@@ -218,6 +267,6 @@ Referensi:
 
   [3]  
   [Sammut C, Webb GI. Front Matter. Encycl Mach Learn. Published online 2011.](https://link.springer.com/referencework/10.1007/978-0-387-30164-8)
-  
+
   [4]
   [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
