@@ -212,9 +212,12 @@ Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki aku
 Referensi:  
   [1]    
   [Fadjeri A, Hidayat K, Handayani DR. Deteksi Emosi pada Teks menggunakan Algoritma Naïve Bayes. J Ris Teknol dan Komput. 2021;1(2):1-4. doi:10.53863/juristik.v1i02.365.](https://jurnal.umk.ac.id/index.php/simet/article/view/3487)
+
   [2]  
   [Cheung AKL. Encyclopedia of Quality of Life and Well-Being.; 2021.](https://link.springer.com/referencework/10.1007/978-3-319-69909-7)
+
   [3]  
   [Sammut C, Webb GI. Front Matter. Encycl Mach Learn. Published online 2011.](https://link.springer.com/referencework/10.1007/978-0-387-30164-8)
+  
   [4]
   [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
