@@ -26,7 +26,7 @@ Analisis emosi dapat digunakan untuk meningkatkan layanan
 pelanggan, sektor bisnis, pemasaran, dan juga sebagai ukuran
 kinerja media sosial. Berdasarkan sifatnya emosi dapat dibedakan menjadi dua yaitu emosi positif dan emosi negatif. Yang termasuk emosi negatif antara lain _sadness_, _fear_, _anger_. Sedangkan yang termasuk dari emosi positif adalah _happy_ dan _love_.
 
-Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik banyak perhatian terutama untuk tujuan analisis emosi. Berdasarkan hasil survei yang telah dilakukan, dari tahun 2014-2017 ada 6 dari 10 paper yang dipublikasikan mengkaji tentang analisis emosi pada teks[1]. Berdasarkan latar belakang peneliti sebelumnya penulis mengambil kesimpulan untuk metode klasifikasi yang digunakan, diantaranya _Logistic Regresion_, _Suport Vector Machine_, dan _LTSM_.
+Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik banyak perhatian terutama untuk tujuan analisis emosi. Berdasarkan hasil survei yang telah dilakukan, dari tahun 2014-2017 ada 6 dari 10 paper yang dipublikasikan mengkaji tentang analisis emosi pada teks[1](https://jurnal.umnu.ac.id/index.php/juristik/article/download/365/115/969). Berdasarkan latar belakang peneliti sebelumnya penulis mengambil kesimpulan untuk metode klasifikasi yang digunakan, diantaranya _Logistic Regresion_, _Suport Vector Machine_, dan _LTSM_.
 
 ## Business Understanding
 ***
@@ -35,8 +35,9 @@ Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik
 - Saat ini, perusahaan belum memiliki sistem yang efektif untuk menganalisis emosi dalam teks dari media sosial secara otomatis dan menyeluruh.
 
 ### Goals
-- Mengembangkan sistem analisis emosi pada teks dari media sosial yang dapat mengidentifikasi dan mengklasifikasikan emosi positif dan negatif secara akurat.
+- Mengembangkan sistem analisis emosi pada teks dari media sosial yang dapat mengidentifikasi dan mengklasifikasikan emosi secara akurat.
 - Meningkatkan pemahaman terhadap persepsi publik terhadap merek atau produk melalui analisis emosi yang lebih mendalam.
+- membuat model dan membandingkannya yang mana model yang terbaik
 
 ### Solution Statements
 - Menggunakan dua pendekatan klasifikasi yang berbeda, yaitu _Logistic Regression_, _Support Vector Machine_ dan _LSTM_, untuk mengklasifikasikan emosi dalam teks media sosial.
@@ -207,3 +208,13 @@ Berikut hasil evaluasi pada proyek ini :
     <div><img src="https://i.ibb.co/RTDt9L4/download-1.png" width="300"/></div>
 
 Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma LTSM memiliki akurasi lebih tinggi tinggi dibandingkan algoritma lainnya dalam proyek ini.
+
+Referensi:  
+  [1]    
+  [Fadjeri A, Hidayat K, Handayani DR. Deteksi Emosi pada Teks menggunakan Algoritma Naïve Bayes. J Ris Teknol dan Komput. 2021;1(2):1-4. doi:10.53863/juristik.v1i02.365.](https://jurnal.umk.ac.id/index.php/simet/article/view/3487)
+  [2]  
+  [Cheung AKL. Encyclopedia of Quality of Life and Well-Being.; 2021.](https://link.springer.com/referencework/10.1007/978-3-319-69909-7)
+  [3]  
+  [Sammut C, Webb GI. Front Matter. Encycl Mach Learn. Published online 2011.](https://link.springer.com/referencework/10.1007/978-0-387-30164-8)
+  [4]
+  [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
