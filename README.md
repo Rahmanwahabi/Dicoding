@@ -40,7 +40,7 @@ Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik
 - membuat model dan membandingkannya yang mana model yang terbaik
 
 ### Solution Statements
-- Menggunakan dua pendekatan klasifikasi yang berbeda, yaitu _Logistic Regression_, _Support Vector Machine_ dan _LSTM_, untuk mengklasifikasikan emosi dalam teks media sosial.
+- Menggunakan tiga pendekatan klasifikasi yang berbeda, yaitu _Logistic Regression_, _Support Vector Machine_ dan _LSTM_, untuk mengklasifikasikan emosi dalam teks media sosial.
 - Menggunakan _Classifictaion Report_ untuk mengevaluasi model saat testing dan accuracy saat train.
 
 ## Data Understanding
