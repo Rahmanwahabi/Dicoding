@@ -18,15 +18,8 @@ Gambar 1. Tampilan Emosi Manusia
 
 <br>
 
-Analisis sentimen digunakan untuk mengekstrasi
-sebuah polaritas opini dari sebuah kata atau kalimat menjadi
-sebuah polaritas positif, negatif atau netral. Dengan melakukan
-analisis emosi, maka tidak hanya bentuk polaritas berupa
-positif, netral atau negatif saja yang mampu dihasilkan, namun
-juga bentuk emosional yang disampaikan oleh pengguna.
-Analisis emosi dapat digunakan untuk meningkatkan layanan
-pelanggan, sektor bisnis, pemasaran, dan juga sebagai ukuran
-kinerja media sosial. Berdasarkan sifatnya emosi dapat dibedakan menjadi dua yaitu emosi positif dan emosi negatif. Yang termasuk emosi negatif antara lain _sadness_, _fear_, _anger_. Sedangkan yang termasuk dari emosi positif adalah _happy_ dan _love_.
+Analisis sentimen digunakan untuk mengekstrasi sebuah polaritas opini dari sebuah kata atau kalimat menjadi sebuah polaritas positif, negatif atau netral. Dengan melakukan analisis emosi, maka tidak hanya bentuk polaritas berupa positif, netral atau negatif saja yang mampu dihasilkan, namun juga bentuk emosional yang disampaikan oleh pengguna. Analisis emosi dapat digunakan untuk meningkatkan layanan
+pelanggan, sektor bisnis, pemasaran, dan juga sebagai ukuran kinerja media sosial. Berdasarkan sifatnya emosi dapat dibedakan menjadi dua yaitu emosi positif dan emosi negatif. Yang termasuk emosi negatif antara lain _sadness_, _fear_, _anger_. Sedangkan yang termasuk dari emosi positif adalah _happy_ dan _love_.
 
 Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik banyak perhatian terutama untuk tujuan analisis emosi. Berdasarkan hasil survei yang telah dilakukan, dari tahun 2014-2017 ada 6 dari 10 paper yang dipublikasikan mengkaji tentang analisis emosi pada teks[1](https://jurnal.umnu.ac.id/index.php/juristik/article/download/365/115/969). Berdasarkan latar belakang peneliti sebelumnya penulis mengambil kesimpulan untuk metode klasifikasi yang digunakan, diantaranya _Logistic Regresion_, _Suport Vector Machine_, dan _LSTM_.
 
@@ -66,6 +59,8 @@ Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik
 ***
 Dataset yang digunakan dalam proyek ini adalah _PRDECT-ID_ Dataset adalah koleksi data ulasan produk Indonesia yang diberi label emosi dan sentimen. Data diambil dari salah satu _e-commerce_ terbesar di Indonesia yaitu Tokopedia. Dataset ini berisi ulasan produk dari 29 kategori produk di Tokopedia yang menggunakan bahasa Indonesia. Setiap ulasan produk diberi label emosi, yaitu cinta, bahagia, marah, takut, atau sedih. Tim anotator melakukan proses pemberian label emosi dengan mengacu pada kriteria anotasi emosi yang telah dibuat oleh seorang ahli psikologi klinis. Atribut-atribut lain yang berkaitan dengan ulasan produk juga diambil, seperti Lokasi, Harga, Rating Keseluruhan, Jumlah Terjual, Jumlah Ulasan, dan Rating Pelanggan, untuk mendukung penelitian lebih lanjut. Dataset ini dapat diunduh di [Kaggle : House Rent Prediction Dataset](https://www.kaggle.com/datasets/jocelyndumlao/prdect-id-indonesian-emotion-classification/data).
 
+### Menampilkan informasi dari dataset
+
 Berikut informasi pada dataset :
 
 + Dataset memiliki format CSV (Comma-Seperated Values).
@@ -75,27 +70,90 @@ Berikut informasi pada dataset :
 
 ### Variable - variable pada dataset
 
-+ Category
-+ Product Name
-+ Location
-+ Price
-+ Overall Rating
-+ Number Sold
-+ Total Review
-+ Customer Rating
-+ Customer Review
-+ Sentiment
-+ Emotion
+1. Category: 
+- Variabel ini menunjukkan jenis atau kategori produk yang dijual, seperti pakaian, elektronik, buku, dll.
+- Tipe: object
 
-### Menampilkan informasi dari dataset
+2. Product Name: 
+- Variabel ini menunjukkan nama atau merek produk yang dijual, seperti sepatu Nike, laptop Asus, novel Harry Potter, dll.
+- Tipe: object
+
++ Location: 
+- Variabel ini menunjukkan lokasi atau kota tempat penjual berada, seperti Jakarta, Surabaya, Bandung, dll.
+- Tipe: object
+
++ Price: 
+- Variabel ini menunjukkan harga produk yang dijual, dalam satuan rupiah.
+- Tipe: int64
+
++ Overall Rating:
+- Variabel ini menunjukkan nilai rata-rata dari semua rating yang diberikan oleh pembeli kepada produk, dalam skala 1-5 bintang.
+- Tipe: float64
+
++ Number Sold: 
+- Variabel ini menunjukkan jumlah produk yang terjual, dalam satuan unit.
+- Tipe: int64
+
++ Total Review: 
+- Variabel ini menunjukkan jumlah ulasan atau testimoni yang diberikan oleh pembeli kepada produk, dalam satuan unit.
+- Tipe: int64
+
++ Customer Rating: 
+- Variabel ini menunjukkan nilai rating yang diberikan oleh pembeli kepada produk, dalam skala 1-5 bintang.
+- Tipe: int64
+
++ Customer Review: 
+- Variabel ini menunjukkan teks ulasan atau testimoni yang ditulis oleh pembeli tentang produk.
+- Tipe: object
+
++ Sentiment: 
+- Variabel ini menunjukkan sentimen atau sikap yang terkandung dalam teks ulasan atau testimoni, yaitu positif, negatif, atau netral.
+- Tipe: object
+
++ Emotion: 
+- Variabel ini menunjukkan emosi atau perasaan yang terkandung dalam teks ulasan atau testimoni, yaitu love, happy, anger, fear, dan sadness.
+Tipe: object
+
+Tabel 1. _Dataset Info_. 
+| #  | Column          | Non-Null Count | Dtype   |
+|----|-----------------|----------------|---------|
+| 0  | Category        | 5400 non-null  | object  |
+| 1  | Product Name    | 5400 non-null  | object  |
+| 2  | Location        | 5400 non-null  | object  |
+| 3  | Price           | 5400 non-null  | int64   |
+| 4  | Overall Rating  | 5400 non-null  | float64 |
+| 5  | Number Sold     | 5400 non-null  | int64   |
+| 6  | Total Review    | 5400 non-null  | int64   |
+| 7  | Customer Rating | 5400 non-null  | int64   |
+| 8  | Customer Review | 5400 non-null  | object  |
+| 9  | Sentiment       | 5400 non-null  | object  |
+| 10 | Emotion         | 5400 non-null  | object  |
+
+###  Informasi statistik pada masing-masing kolom
+
+Output ini menunjukkan statistik deskriptif dari lima variabel numerik yang digunakan untuk analisis emosi pada teks dari media sosial. Output ini terdiri dari delapan baris yang masing-masing memiliki nama, seperti count, mean, std, dll. Output ini juga menunjukkan bahwa data memiliki 5400 observasi.
+
+Tabel 2. _Dataset Describe_. 
+|       | Price | Overall Rating | Number Sold |   Total Review | Customer Rating |
+|------:|------:|---------------:|------------:|---------------:|----------------:|
+| count | count |   5.400000e+03 | 5400.000000 |    5400.000000 |     5400.000000 |
+|  mean |  mean |   2.386961e+05 |    4.854389 |   15961.951852 |     2168.645556 |
+|  std  |  std  |   8.016337e+05 |    0.108259 |   74201.913338 |     2915.666035 |
+|  min  |  min  |   1.000000e+02 |    4.100000 |       9.000000 |        4.000000 |
+|  25%  |  25%  |   2.000000e+04 |    4.800000 |    1630.000000 |      576.000000 |
+|  50%  |  50%  |   5.990000e+04 |    4.900000 |    3794.500000 |     1192.000000 |
+|  75%  |  75%  |   1.500000e+05 |    4.900000 |    9707.000000 |     2582.000000 |
+|  max  |  max  |   1.539900e+07 |    5.000000 | 1000000.000000 |    24500.000000 |
+
+### Mengetahui jumlah dataset
 Pada bagian ini akan dipakai fungsi _shape()_ dan value_counts() untuk mengetahui jumlah dataset dan sebaran dari label, informasi dari jumlah dan sebaran dapat dilihat pada tabel 1-2
 
-Tabel 1. _Dataset Shape_. 
+Tabel 3. _Dataset Shape_. 
 | DataFrame | Shape      |
 | --------- | ---------- |
 | df        | (16000, 2) |
 
-Tabel 2. distribusi label pada **df**
+Tabel 4. distribusi label pada **df**
 | label    | jumlah |
 | -------- | ------ |
 | happy    | 1770   |
@@ -112,10 +170,122 @@ Gambar 2. Visualisasi distribusi label emosi
 
 <br>
 
+### Univariate Analysis
+Univariate Analysis adalah menganalisis setiap fitur secara terpisah.
+
+Fitur-fitur yang termasuk dalam numerical_features adalah fitur-fitur yang memiliki nilai numerik, yaitu price, Overall Rating, Number Sold, Total Review, dan Customer Rating. Fitur-fitur ini bisa digunakan untuk menganalisis atau mengukur kinerja, popularitas, atau kualitas dari produk.
+
+<br>
+
+<div><img src="https://i.ibb.co/zsWRVYT/download-1.png" width="300"/></div>
+
+Gambar 3. Visualisasi Numerical Features
+
+ini menunjukkan bahwa sebagian besar produk memiliki harga rendah dengan sedikit produk yang harga tinggi, mendapatkan rating keseluruhan tinggi, terjual dalam jumlah besar di awal tetapi kemudian penjualan menurun secara signifikan, mendapatkan review banyak di awal yang berkurang secara eksponensial seiring dengan bertambahnya jumlah review, dan memiliki rating pelanggan yang sangat rendah atau sangat tinggi dengan sedikit yang berada di antara keduanya.
+
+<br>
+
+Fitur-fitur yang termasuk dalam categorical_features adalah fitur-fitur yang memiliki nilai kategorik, yaitu Category, Product Name, Location, Sentiment, dan Emotion. Fitur-fitur ini bisa digunakan untuk mengelompokkan atau mengklasifikasikan produk berdasarkan jenis, nama, lokasi, sentimen, atau emosi yang terkait dengan produk.
+
+contoh dari categorical_features yaitu category
+
+Table 5. Fitur Category
+|                          | jumlah sampel | persentase |
+|-------------------------:|---------------|------------|
+| Computers and Laptops    | 200           | 3.7        |
+| Kitchen                  | 200           | 3.7        |
+| Health                   | 200           | 3.7        |
+| Beauty                   | 200           | 3.7        |
+| Camera                   | 200           | 3.7        |
+| Mother and Baby          | 200           | 3.7        |
+| Phones and Tablets       | 200           | 3.7        |
+| Gaming                   | 200           | 3.7        |
+| Movies and Music         | 200           | 3.7        |
+| Women's Fashion          | 200           | 3.7        |
+| Men's Fashion            | 200           | 3.7        |
+| Muslim Fashion           | 200           | 3.7        |
+| Kids and Baby Fashion    | 200           | 3.7        |
+| Electronics              | 200           | 3.7        |
+| Books                    | 200           | 3.7        |
+| Toys and Hobbies         | 200           | 3.7        |
+| Sport                    | 200           | 3.7        |
+| Other Products           | 200           | 3.7        |
+| Carpentry                | 200           | 3.7        |
+| Party Supplies and Craft | 200           | 3.7        |
+| Body Care                | 200           | 3.7        |
+| Animal Care              | 200           | 3.7        |
+| Automotive               | 200           | 3.7        |
+| Office & Stationery      | 200           | 3.7        |
+| Food and Drink           | 200           | 3.7        |
+| Household                | 200           | 3.7        |
+| Tour and Travel          | 80            | 1.5        |
+| Precious Metal           | 80            | 1.5        |
+| Property                 | 40            | 0.7        |
+
+hasil dari analisis fitur kategori ('Category') pada dataset yang dilakukan. 
+jumlah sampel: merupakan jumlah total data yang terdapat pada setiap kategori.
+persentase: merupakan persentase dari jumlah sampel terhadap total keseluruhan data dalam dataset.
+Dari output tersebut, dapat dilihat distribusi jumlah sampel dan persentase untuk setiap kategori. Misalnya, kategori 'Computers and Laptops' memiliki 200 sampel yang menyumbang sekitar 3.7% dari total data. Begitu pula dengan kategori lainnya.
+
+### multivariate Analysis
+
+### Categorical Features
+
+<br>
+
+<div><img src="https://i.ibb.co/KF3BJ0x/download-3.png" width="300"/></div>
+
+Gambar 4. Fitur kategori terhadap Price
+
+Data tersebut berisi kategori, nama, deskripsi, harga, dan rating dari setiap produk. Untuk menghitung rata-rata harga relatif terhadap emosi, kita bisa menggunakan analisis sentimen untuk mengklasifikasikan deskripsi produk ke dalam lima emosi yang berbeda. Kemudian, kita bisa menghitung rata-rata dari harga produk yang termasuk dalam setiap emosi. Hasilnya bisa divisualisasikan dengan grafik batang.
+
+<br>
+
+### Numerical Features
+
+### Categorical Features
+
+<br>
+
+<div><img src="https://i.ibb.co/WtKnfj5/download-4.png" width="300"/></div>
+
+Gambar 5. Korelasi Price dengan fitur lainnya
+
+- Harga produk memiliki korelasi positif dengan Overall Rating, artinya produk yang memiliki rating tinggi cenderung memiliki harga tinggi juga, dan sebaliknya.
+- Harga produk memiliki korelasi negatif dengan Number Sold, artinya produk yang memiliki harga tinggi cenderung terjual dalam jumlah rendah, dan sebaliknya.
+- Harga produk memiliki korelasi negatif dengan Total Review, artinya produk yang memiliki harga tinggi cenderung mendapatkan review sedikit, dan sebaliknya.
+
+<br>
+
+### Mengevaluasi skor korelasi
+
+<br>
+
+<div><img src="https://i.ibb.co/Pgpm0Yp/download-5.png" width="300"/></div>
+
+Gambar 6. Mengevaluasi skor korelasi
+
+Dari matriks korelasi di atas, dapat dilihat bahwa:
+
+- Harga dan rating umum memiliki korelasi positif rendah (0.15). Hal ini menunjukkan bahwa ketika harga naik, maka rating umum juga naik sedikit.
+- Harga dan jumlah produk yang dijual memiliki korelasi negatif rendah (-0.07). Hal ini menunjukkan bahwa ketika harga naik, maka jumlah produk yang dijual sedikit berkurang.
+- Harga dan jumlah ulasan memiliki korelasi positif rendah (0.09). Hal ini menunjukkan bahwa ketika harga naik, maka jumlah ulasan juga sedikit naik.
+- Rating umum dan jumlah produk yang dijual memiliki korelasi positif sedang (0.17). Hal ini menunjukkan bahwa ketika rating umum naik, maka jumlah produk yang dijual juga naik sedikit.
+- Rating umum dan jumlah ulasan memiliki korelasi positif sedang (0.2). Hal ini menunjukkan bahwa ketika rating umum naik, maka jumlah ulasan juga naik sedikit.
+- Jumlah produk yang dijual dan jumlah ulasan memiliki korelasi negatif sedang (-0.21). Hal ini menunjukkan bahwa ketika jumlah produk yang dijual naik, maka jumlah ulasan sedikit berkurang.
+- Jumlah produk yang dijual dan rating customer memiliki korelasi negatif sedang (-0.6). Hal ini menunjukkan bahwa ketika jumlah produk yang dijual naik, maka rating customer sedikit turun.
+- Jumlah ulasan dan rating customer memiliki korelasi negatif sangat kuat (-0.8). Hal ini menunjukkan bahwa ketika jumlah ulasan naik, maka rating customer sedikit turun.
+
+<br>
+
+## Data Preparation
+***
+Pada tahap ini, melakukan beberapa teknik data preparation untuk membersihkan, menyederhanakan, dan mempersiapkan teks dari media sosial sehingga dapat diolah dan dianalisis lebih lanjut untuk analisis emosi. Disini tidak menuliskan kode pada laporan ini, karena kami sudah menuliskannya pada notebook. Disini hanya menjelaskan cara kerja dan alasan dari setiap teknik yang akan digunakan.
+
 ### Mengecek missing value dan menangani jika ditemukan
 Pada bagian ini digunakan fungsi `isnull().sum()` untuk tiap _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
-Table 3. Evaluasi hasil missing value di tiap dataframe
+Table 6. Evaluasi hasil missing value di tiap dataframe
 | dtype                 | int64  |
 | --------------------- | ------ |
 | Category              | 0      |
@@ -145,13 +315,9 @@ Menghitung jumlah _stopwords_ dalam data dapat berguna untuk beberapa tujuan, se
 
 <div><img src="https://i.ibb.co/z4hMGJt/download-3.png" width="300"/></div>
 
-Gambar 3. Visualisasi distribusi kata-kata yang merupakan _stopwords_
+Gambar 7. Visualisasi distribusi kata-kata yang merupakan _stopwords_
 
 <br>
-
-## Data Preparation
-***
-Pada tahap ini, melakukan beberapa teknik data preparation untuk membersihkan, menyederhanakan, dan mempersiapkan teks dari media sosial sehingga dapat diolah dan dianalisis lebih lanjut untuk analisis emosi. Disini tidak menuliskan kode pada laporan ini, karena kami sudah menuliskannya pada notebook. Disini hanya menjelaskan cara kerja dan alasan dari setiap teknik yang akan digunakan.
 
 1. Normalisasi Teks: Teknik ini bertujuan untuk membuat teks lebih konsisten dan mudah diproses dengan mengurangi variasi dalam teks. Kami melakukan tiga langkah dalam normalisasi teks, yaitu:
 - _Lowercasing_: Mengubah semua karakter teks menjadi huruf kecil, sehingga tidak ada perbedaan antara huruf besar dan kecil dalam teks.
@@ -171,7 +337,7 @@ Pada tahap ini, melakukan beberapa teknik data preparation untuk membersihkan, m
 
 Untuk memberikan gambaran tentang hasil dari teknik data preparation yang kami lakukan, kami menampilkan beberapa contoh teks sebelum dan sesudah penggunaan cleaning pada tabel berikut:
 
-Table 4. Hasil Cleaning Customer Review:
+Table 7. Hasil Cleaning Customer Review:
 | Before Cleaning                                               | After Cleaning                                         |
 | ------------------------------------------------------------- | ------------------------------------------------------ |
 | Alhamdulillah berfungsi dengan baik. Packaging...             | alhamdulillah berfungsi dengan baik packaging ...      |
@@ -221,7 +387,7 @@ Proses improvement ini dilakukan untuk meningkatkan performa model _LSTM_ dalam 
 
 <div><img src="https://i.ibb.co/HhRvybW/download.png" width="300"/></div>
 
-Gambar 4. Arsitektur _LSTM_ yang digunakan
+Gambar 8. Arsitektur _LSTM_ yang digunakan
 
 <br>
 
@@ -256,7 +422,7 @@ Dengan:
 - FN: False Negative
 
 Berikut hasil evaluasi pada proyek ini :
-+ Table 5. Akurasi pada 3 model:
++ Table 8. Akurasi pada 3 model:
   | model               | accuracy |
   |---------------------|----------|
   | LSTM                | 0.98     |
@@ -264,14 +430,14 @@ Berikut hasil evaluasi pada proyek ini :
   | Logistic Regression | 0.82     |
 
     <div><img src="https://i.ibb.co/RTDt9L4/download-1.png" width="300"/></div>
-    Gambar 5. Gambar 6. Kurva perbandingan akurasi model yang digunakan
+    Gambar 9. Gambar 6. Kurva perbandingan akurasi model yang digunakan
 
 Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma _LSTM_ memiliki akurasi lebih tinggi tinggi dibandingkan algoritma lainnya dalam proyek ini.
 
 + Presisi, Recall, F1-Score
 - _Logistic Regression_
 
-Table 6. Classification Report _Logistic Regression_
+Table 9. Classification Report _Logistic Regression_
 
 |         | precision | recall | f1-score | support |
 |---------|-----------|--------|----------|---------|
@@ -283,7 +449,7 @@ Table 6. Classification Report _Logistic Regression_
 
 - _SVM_
 
-Table 7. Classification Report _SVM_
+Table 10. Classification Report _SVM_
 
 |         | precision | recall | f1-score | support |
 |---------|-----------|--------|----------|---------|
@@ -295,7 +461,7 @@ Table 7. Classification Report _SVM_
 
 - _LSTM_
 
-Table 8. Classification Report _LSTM_
+Table 11. Classification Report _LSTM_
 
 |   | precision | recall | f1-score | support |
 |---|-----------|--------|----------|---------|
@@ -343,6 +509,3 @@ Referensi:
 
   [9]
   [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
-
-
-  terima kasih
