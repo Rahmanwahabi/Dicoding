@@ -146,7 +146,7 @@ Tabel 2. _Dataset Describe_.
 |  max  |  max  |   1.539900e+07 |    5.000000 | 1000000.000000 |    24500.000000 |
 
 ### Mengetahui jumlah dataset
-Pada bagian ini akan dipakai fungsi _shape()_ dan value_counts() untuk mengetahui jumlah dataset dan sebaran dari label, informasi dari jumlah dan sebaran dapat dilihat pada tabel 1-2
+Pada bagian ini akan dipakai fungsi _shape()_ dan value_counts() untuk mengetahui jumlah dataset dan sebaran dari label, informasi dari jumlah dan sebaran dapat dilihat pada tabel 3-4
 
 Tabel 3. _Dataset Shape_. 
 | DataFrame | Shape      |
