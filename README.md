@@ -172,9 +172,7 @@ Teknik-teknik data preparation ini diperlukan untuk membersihkan, menyederhanaka
 ### Sebelum dan sesudah penggunaan cleaning pada teks
 
 <br>
-
-<div><img src="https://i.ibb.co/z4hMGJt/download-3.png" width="300"/></div>
-
+<div><img src="https://i.ibb.co/4Tk0kNy/Screenshot-2024-02-24-123933.png" width="300"/></div>
 
 <br>
 
