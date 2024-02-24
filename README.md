@@ -270,7 +270,9 @@ Dari hasil evaluasi dapat dilihat bahwa model dengan algoritma _LSTM_ memiliki a
 
 + Presisi, Recall, F1-Score
 - _Logistic Regression_
+
 Table 6. Classification Report _Logistic Regression_
+
 |         | precision | recall | f1-score | support |
 |---------|-----------|--------|----------|---------|
 | Anger   | 0.90      | 0.67   | 0.77     | 675     |
@@ -280,7 +282,9 @@ Table 6. Classification Report _Logistic Regression_
 | Sadness | 0.79      | 0.90   | 0.84     | 1185    |
 
 - _SVM_
+
 Table 7. Classification Report _SVM_
+
 |         | precision | recall | f1-score | support |
 |---------|-----------|--------|----------|---------|
 | Anger   | 0.98      | 0.95   | 0.97     | 675     |
@@ -290,7 +294,9 @@ Table 7. Classification Report _SVM_
 | Sadness | 0.96      | 0.99   | 0.97     | 1185    |
 
 - _LSTM_
+
 Table 8. Classification Report _LSTM_
+
 |   | precision | recall | f1-score | support |
 |---|-----------|--------|----------|---------|
 | 0 | 0.98      | 0.98   | 0.98     | 675     |
@@ -308,6 +314,7 @@ Dalam proyek ini, telah menggunakan tiga pendekatan klasifikasi yang berbeda, ya
 Dari hasil evaluasi, model _LSTM_ memberikan kinerja yang lebih baik dibandingkan dengan model lainnya, dengan akurasi sebesar 0.98 dan nilai presisi, recall, dan F1-score tertinggi untuk semua kelas emosi. Hal ini menunjukkan bahwa model _LSTM_ mampu memahami konteks teks panjang dan mengklasifikasikan emosi dengan baik pada data review pelanggan.
 
 Dengan demikian, proyek ini dapat dianggap berhasil dalam mengembangkan sistem analisis emosi pada teks media sosial untuk membantu perusahaan memahami persepsi publik terhadap merek atau produk mereka. Model _LSTM_ dapat menjadi solusi yang efektif dalam memprediksi emosi berdasarkan teks yang tersebar di media sosial, sehingga dapat membantu perusahaan meningkatkan kualitas layanan dan strategi pemasaran mereka.
+
 
 Referensi:  
   [1]    
@@ -336,3 +343,6 @@ Referensi:
 
   [9]
   [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
+
+
+  terima kasih
