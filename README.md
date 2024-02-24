@@ -112,18 +112,20 @@ Visualisasi distribusi label emosi
 ### Mengecek missing value dan menangani jika ditemukan
 Pada bagian ini digunakan fungsi `isnull().sum()` untuk tiap _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
-Category           0
-Product Name       0
-Location           0
-Price              0
-Overall Rating     0
-Number Sold        0
-Total Review       0
-Customer Rating    0
-Customer Review    0
-Sentiment          0
-Emotion            0
-dtype: int64
+| dtype                 | int64  |
+| --------------------- | ------ |
+| Category              | 1770   |
+| Product Name          | 1202   |
+| Location              | 699    |
+| Price                 | 920    |
+| Overall Rating        | 809    |
+| Number Sold           | 809    |
+| Total Review          | 809    |
+| Customer Rating       | 809    |
+| Customer Review       | 809    |
+| Sentiment             | 809    |
+| Emotion               | 809    |
+
 
 ### Menghitung jumlah stopwords dalam data
 
