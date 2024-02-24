@@ -169,6 +169,27 @@ Alasan: Padding diperlukan karena model yang akan digunakan membutuhkan input de
 
 Teknik-teknik data preparation ini diperlukan untuk membersihkan, menyederhanakan, dan mempersiapkan teks dari media sosial sehingga dapat diolah dan dianalisis lebih lanjut untuk analisis emosi.
 
+### Sebelum dan sesudah penggunaan cleaning pada teks
+Before cleaning
+
+print("Sebelum Pembersihan:")
+print(df['Customer Review'].iloc[0])
+
+  Sebelum Pembersihan:
+Alhamdulillah berfungsi dengan baik. Packaging aman. Respon cepat dan ramah. Seller dan kurir amanah
+
+After cleaning
+
+  >>> import nltk
+  >>> nltk.download('wordnet')
+
+print("Setelah Pembersihan:")
+df_cleaned = normalize_text(df)
+print(df_cleaned['Customer Review'].iloc[0])
+
+Setelah Pembersihan:
+alhamdulillah berfungsi dengan baik packaging aman respon cepat dan ramah seller dan kurir amanah
+
 ## Modeling
 ***
 ### Tahapan dan Parameter Pemodelan
