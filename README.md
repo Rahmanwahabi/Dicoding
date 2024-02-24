@@ -28,6 +28,14 @@ kinerja media sosial. Berdasarkan sifatnya emosi dapat dibedakan menjadi dua yai
 
 Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik banyak perhatian terutama untuk tujuan analisis emosi. Berdasarkan hasil survei yang telah dilakukan, dari tahun 2014-2017 ada 6 dari 10 paper yang dipublikasikan mengkaji tentang analisis emosi pada teks[1](https://jurnal.umnu.ac.id/index.php/juristik/article/download/365/115/969). Berdasarkan latar belakang peneliti sebelumnya penulis mengambil kesimpulan untuk metode klasifikasi yang digunakan, diantaranya _Logistic Regresion_, _Suport Vector Machine_, dan _LTSM_.
 
+### Manfaat bagi perusahaan atau industri tertentu:
+
+- Analisis emosi dapat membantu perusahaan dalam mengukur kepuasan pelanggan, loyalitas merek, dan preferensi produk. Dengan mengetahui emosi pelanggan terhadap produk atau layanan tertentu, perusahaan dapat meningkatkan kualitas, menyesuaikan strategi pemasaran, dan memberikan layanan yang lebih baik. Misalnya, sebuah perusahaan otomotif dapat menggunakan analisis emosi untuk mengetahui emosi pelanggan terhadap fitur, desain, atau harga mobil yang mereka jual, dan kemudian melakukan perbaikan atau penawaran yang sesuai[2](https://link.springer.com/article/10.1007/s13278-021-00776-6).
+
+- Analisis emosi dapat membantu perusahaan dalam mengidentifikasi dan mengelola krisis reputasi, risiko, dan peluang. Dengan memantau emosi publik terhadap isu-isu yang berkaitan dengan perusahaan, industri, atau kompetitor, perusahaan dapat mendeteksi adanya sentimen negatif, protes, atau keluhan yang dapat merusak citra atau bisnis mereka, dan kemudian meresponnya dengan cepat dan tepat. Misalnya, sebuah perusahaan penerbangan dapat menggunakan analisis emosi untuk mengetahui emosi penumpang terhadap kualitas layanan, keamanan, atau keterlambatan penerbangan, dan kemudian memberikan kompensasi, permintaan maaf, atau penjelasan yang sesuai[3](https://www.repustate.com/blog/sentiment-analysis-real-world-examples/).
+
+- Analisis emosi dapat membantu perusahaan dalam mengembangkan produk atau layanan yang lebih inovatif, kreatif, dan sesuai dengan kebutuhan pasar. Dengan memahami emosi konsumen terhadap tren, gaya hidup, atau keinginan, perusahaan dapat menciptakan produk atau layanan yang lebih menarik, unik, dan relevan. Misalnya, sebuah perusahaan kosmetik dapat menggunakan analisis emosi untuk mengetahui emosi konsumen terhadap warna, aroma, atau tekstur produk kecantikan yang mereka gunakan, dan kemudian menciptakan produk kecantikan yang lebih sesuai dengan selera atau kebutuhan konsumen[4](https://blog.hootsuite.com/social-media-sentiment-analysis-tools/).
+
 ## Business Understanding
 ***
 ### Problem Statements
@@ -42,6 +50,14 @@ Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik
 ### Solution Statements
 - Menggunakan tiga pendekatan klasifikasi yang berbeda, yaitu _Logistic Regression_, _Support Vector Machine_ dan _LSTM_, untuk mengklasifikasikan emosi dalam teks media sosial.
 - Menggunakan _Classifictaion Report_ untuk mengevaluasi model saat testing dan accuracy saat train.
+
+### Studi kasus tentang bagaimana analisis emosi pada teks media sosial telah memberikan nilai tambah bagi perusahaan:
+
+- Sebuah studi kasus yang dilakukan oleh Benrouba dan Boudour (2023)[5](https://www.semanticscholar.org/paper/Emotional-sentiment-analysis-of-social-media-for-Benrouba-Boudour/89682c3a79487a7af9895eb3067c80fc77804515), menunjukkan bagaimana analisis emosi dapat membantu meningkatkan kesehatan mental pengguna media sosial. Mereka mengusulkan sebuah sistem yang dapat memfilter konten media sosial yang dapat berdampak buruk secara emosional bagi pengguna, dengan mengklasifikasikan emosi dalam teks media sosial menjadi lima kategori dasar, yaitu cinta, bahagia, marah, takut, atau sedih. Sistem ini dapat membantu pengguna media sosial untuk menghindari konten yang dapat menimbulkan stres, depresi, atau kecemasan, dan memilih konten yang dapat meningkatkan suasana hati, motivasi, atau kepercayaan diri mereka.
+
+- Sebuah studi kasus yang dilakukan oleh Nandwani dan Verma (2021)[6](https://link.springer.com/article/10.1007/s13278-021-00776-6), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengukur kepuasan pelanggan, loyalitas merek, dan preferensi produk. Mereka mengusulkan sebuah sistem yang dapat mengidentifikasi dan mengklasifikasikan emosi dalam ulasan produk online, dengan menggunakan berbagai model emosi, seperti model Plutchik, model Ekman, dan model Parrott. Sistem ini dapat membantu perusahaan dalam mengetahui emosi pelanggan terhadap produk atau layanan tertentu, dan kemudian meningkatkan kualitas, menyesuaikan strategi pemasaran, dan memberikan layanan yang lebih baik.
+
+- Sebuah studi kasus yang dilakukan oleh Alshahrani et al. (2021)[7](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255615), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengidentifikasi dan mengelola krisis reputasi, risiko, dan peluang. Mereka mengusulkan sebuah sistem yang dapat memantau emosi publik terhadap isu-isu yang berkaitan dengan pandemi COVID-19, dengan menggunakan pendekatan deep learning berbasis LSTM. Sistem ini dapat membantu perusahaan dalam mendeteksi adanya sentimen negatif, protes, atau keluhan yang dapat merusak citra atau bisnis mereka, dan kemudian meresponnya dengan cepat dan tepat.
 
 ## Data Understanding
 ***
@@ -85,22 +101,48 @@ Tabel 2. distribusi label pada **df**
 | fear     | 920    |
 | love     | 809    |
 
+<br>
+
+<div><img src="https://i.ibb.co/J7YpLQd/download-2.png" width="300"/></div>
+
+Visualisasi distribusi label emosi
+
+<br>
 
 ### Mengecek missing value dan menangani jika ditemukan
 Pada bagian ini digunakan fungsi `isnull().sum()` untuk tiap _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
-| Category           0 |
-| Product Name       0 |
-| Location           0 |
-| Price              0 |
-| Overall Rating     0 |
-| Number Sold        0 |
-| Total Review       0 |
-| Customer Rating    0 |
-| Customer Review    0 |
-| Sentiment          0 |
-| Emotion            0 |
-| dtype: int64         |
+| Category        |   0 |
+| Product Name    |   0 |
+| Location        |   0 |
+| Price           |   0 |
+| Overall Rating  |   0 |
+| Number Sold     |   0 |
+| Total Review    |   0 |
+| Customer Rating |   0 |
+| Customer Review |   0 |
+| Sentiment       |   0 |
+| Emotion         |   0 |
+|-----------------|-----|
+| dtype: int64          |
+
+### Menghitung jumlah stopwords dalam data
+
+Menghitung jumlah stopwords dalam data dapat berguna untuk beberapa tujuan, seperti:
+
+- Mengurangi ukuran data dan waktu pemrosesan dengan menghapus stopwords yang tidak relevan.
+
+- Meningkatkan kinerja model analisis teks dengan memfokuskan pada kata-kata yang memiliki makna atau informasi penting.
+
+- Mengetahui karakteristik data dan gaya penulisan dengan melihat frekuensi dan distribusi stopwords.
+
+<br>
+
+<div><img src="https://i.ibb.co/z4hMGJt/download-3.png" width="300"/></div>
+
+Visualisasi distribusi kata-kata yang merupakan stopwords
+
+<br>
 
 ## Data Preparation
 ***
@@ -152,7 +194,7 @@ Teknik-teknik data preparation ini diperlukan untuk membersihkan, menyederhanaka
 - Kekurangan: Membutuhkan waktu dan sumber daya komputasi yang besar, rentan terhadap overfitting.
 
 ### Proses Improvement dengan Hyperparameter Tuning
-Pada model LSTM, kami melakukan improvement dengan melakukan hyperparameter tuning. Beberapa langkah yang dilakukan adalah:
+Pada model LSTM, melakukan improvement dengan melakukan hyperparameter tuning. Beberapa langkah yang dilakukan adalah:
 
 1. Penambahan layer LSTM dan penyesuaian jumlah unit LSTM.
 2. Penyesuaian dropout rate untuk mengurangi overfitting.
@@ -172,7 +214,7 @@ Dari ketiga model yang digunakan, model LSTM dipilih sebagai model terbaik karen
 
 ## Evaluasi
 ***
-Pada proyek ini menggunakan model deep learning bertipe klasifikasi yang berarti jika mendekati 100% accuracy, performanya bagus, sedangkan jika dibawah 75%, maka performanya jelek. Metrik yang akan kita pakai pada prediksi ini adalah Accuracy, metrik ini menghitung persentase prediksi yang benar dari total prediksi yang dilakukan. Accuracy ditulis dalam rumus berikut:
+Pada proyek ini menggunakan model deep learning bertipe klasifikasi yang berarti jika mendekati 100% accuracy, performanya bagus, sedangkan jika dibawah 75%, maka performanya jelek. Metrik yang akan pakai pada prediksi ini adalah Accuracy, metrik ini menghitung persentase prediksi yang benar dari total prediksi yang dilakukan. Accuracy ditulis dalam rumus berikut:
 
 $\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}$   
 
