@@ -237,7 +237,7 @@ Dari output tersebut, dapat dilihat distribusi jumlah sampel dan persentase untu
 
 Gambar 4. Fitur kategori terhadap Price
 
-Data tersebut berisi kategori, nama, deskripsi, harga, dan rating dari setiap produk. Untuk menghitung rata-rata harga relatif terhadap emosi, kita bisa menggunakan analisis sentimen untuk mengklasifikasikan deskripsi produk ke dalam lima emosi yang berbeda. Kemudian, kita bisa menghitung rata-rata dari harga produk yang termasuk dalam setiap emosi. Hasilnya bisa divisualisasikan dengan grafik batang.
+Data tersebut berisi kategori, nama, deskripsi, harga, dan rating dari setiap produk. Untuk menghitung rata-rata harga relatif terhadap emosi, bisa menggunakan analisis sentimen untuk mengklasifikasikan deskripsi produk ke dalam lima emosi yang berbeda. Kemudian, bisa menghitung rata-rata dari harga produk yang termasuk dalam setiap emosi. Hasilnya bisa divisualisasikan dengan grafik batang.
 
 <br>
 
