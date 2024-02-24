@@ -113,15 +113,25 @@ Visualisasi distribusi label emosi
 Pada bagian ini digunakan fungsi `isnull().sum()` untuk tiap _DataFrame_. Saat dicek tidak ditemukan adanya _missing value_ pada _DataFrame_
 
 | Category        |   0 |
+|-----------------|-----|
 | Product Name    |   0 |
+|-----------------|-----|
 | Location        |   0 |
+|-----------------|-----|
 | Price           |   0 |
+|-----------------|-----|
 | Overall Rating  |   0 |
+|-----------------|-----|
 | Number Sold     |   0 |
+|-----------------|-----|
 | Total Review    |   0 |
+|-----------------|-----|
 | Customer Rating |   0 |
+|-----------------|-----|
 | Customer Review |   0 |
+|-----------------|-----|
 | Sentiment       |   0 |
+|-----------------|-----|
 | Emotion         |   0 |
 |-----------------|-----|
 | dtype: int64          |
