@@ -55,9 +55,9 @@ Analisis emosi pada teks dari media sosial adalah bidang penelitian yang menarik
 
 - Sebuah studi kasus yang dilakukan oleh Benrouba dan Boudour (2023)[5](https://www.semanticscholar.org/paper/Emotional-sentiment-analysis-of-social-media-for-Benrouba-Boudour/89682c3a79487a7af9895eb3067c80fc77804515), menunjukkan bagaimana analisis emosi dapat membantu meningkatkan kesehatan mental pengguna media sosial. Mereka mengusulkan sebuah sistem yang dapat memfilter konten media sosial yang dapat berdampak buruk secara emosional bagi pengguna, dengan mengklasifikasikan emosi dalam teks media sosial menjadi lima kategori dasar, yaitu cinta, bahagia, marah, takut, atau sedih. Sistem ini dapat membantu pengguna media sosial untuk menghindari konten yang dapat menimbulkan stres, depresi, atau kecemasan, dan memilih konten yang dapat meningkatkan suasana hati, motivasi, atau kepercayaan diri mereka.
 
-- Sebuah studi kasus yang dilakukan oleh Nandwani dan Verma (2021)[6](https://link.springer.com/article/10.1007/s13278-021-00776-6), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengukur kepuasan pelanggan, loyalitas merek, dan preferensi produk. Mereka mengusulkan sebuah sistem yang dapat mengidentifikasi dan mengklasifikasikan emosi dalam ulasan produk online, dengan menggunakan berbagai model emosi, seperti model Plutchik, model Ekman, dan model Parrott. Sistem ini dapat membantu perusahaan dalam mengetahui emosi pelanggan terhadap produk atau layanan tertentu, dan kemudian meningkatkan kualitas, menyesuaikan strategi pemasaran, dan memberikan layanan yang lebih baik.
+- Sebuah studi kasus yang dilakukan oleh Nandwani dan Verma (2021)[2](https://link.springer.com/article/10.1007/s13278-021-00776-6), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengukur kepuasan pelanggan, loyalitas merek, dan preferensi produk. Mereka mengusulkan sebuah sistem yang dapat mengidentifikasi dan mengklasifikasikan emosi dalam ulasan produk online, dengan menggunakan berbagai model emosi, seperti model Plutchik, model Ekman, dan model Parrott. Sistem ini dapat membantu perusahaan dalam mengetahui emosi pelanggan terhadap produk atau layanan tertentu, dan kemudian meningkatkan kualitas, menyesuaikan strategi pemasaran, dan memberikan layanan yang lebih baik.
 
-- Sebuah studi kasus yang dilakukan oleh Alshahrani et al. (2021)[7](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255615), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengidentifikasi dan mengelola krisis reputasi, risiko, dan peluang. Mereka mengusulkan sebuah sistem yang dapat memantau emosi publik terhadap isu-isu yang berkaitan dengan pandemi COVID-19, dengan menggunakan pendekatan deep learning berbasis LSTM. Sistem ini dapat membantu perusahaan dalam mendeteksi adanya sentimen negatif, protes, atau keluhan yang dapat merusak citra atau bisnis mereka, dan kemudian meresponnya dengan cepat dan tepat.
+- Sebuah studi kasus yang dilakukan oleh Alshahrani et al. (2021)[6](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255615), menunjukkan bagaimana analisis emosi dapat membantu perusahaan dalam mengidentifikasi dan mengelola krisis reputasi, risiko, dan peluang. Mereka mengusulkan sebuah sistem yang dapat memantau emosi publik terhadap isu-isu yang berkaitan dengan pandemi COVID-19, dengan menggunakan pendekatan deep learning berbasis LSTM. Sistem ini dapat membantu perusahaan dalam mendeteksi adanya sentimen negatif, protes, atau keluhan yang dapat merusak citra atau bisnis mereka, dan kemudian meresponnya dengan cepat dan tepat.
 
 ## Data Understanding
 ***
@@ -172,7 +172,7 @@ Teknik-teknik data preparation ini diperlukan untuk membersihkan, menyederhanaka
 ### Sebelum dan sesudah penggunaan cleaning pada teks
 
 <br>
-<div><img src="https://i.ibb.co/4Tk0kNy/Screenshot-2024-02-24-123933.png" width="300"/></div>
+<div><img src="https://i.ibb.co/4Tk0kNy/Screenshot-2024-02-24-123933.png" width="500"/></div>
 
 <br>
 
@@ -182,24 +182,28 @@ Teknik-teknik data preparation ini diperlukan untuk membersihkan, menyederhanaka
 1. TF-IDF Embedding: 
 - Digunakan untuk mengubah teks ke dalam representasi vektor numerik.
 - Parameter: Beberapa parameter yang dapat disesuaikan dalam TF-IDF, seperti penggunaan stop words, n-grams, dll.
+- Alasan penggunaan: TF-IDF dipilih karena merupakan metode yang umum digunakan dalam analisis teks dan dapat membantu mengurangi dimensi fitur yang besar.
 
 2. Logistic Regression:
-- Logistic Regression adalah sebuah metode analisis statistik yang membangun sebuah model statistik untuk menggambarkan hubungan antara sebuah variabel hasil yang bersifat biner atau dikotomis (ya/tidak) dengan satu atau lebih variabel prediktor atau penjelas. Model ini menggunakan fungsi logit untuk memodelkan peluang dari sebuah kejadian biner[2](https://link.springer.com/referenceworkentry/10.1007/978-3-319-69909-7_1689-2).
+- Logistic Regression adalah sebuah metode analisis statistik yang membangun sebuah model statistik untuk menggambarkan hubungan antara sebuah variabel hasil yang bersifat biner atau dikotomis (ya/tidak) dengan satu atau lebih variabel prediktor atau penjelas. Model ini menggunakan fungsi logit untuk memodelkan peluang dari sebuah kejadian biner[7](https://link.springer.com/referenceworkentry/10.1007/978-3-319-69909-7_1689-2).
 - Parameter: Solver ('liblinear'), random_state.
 - Kelebihan: Mudah diimplementasikan, memiliki interpretasi yang baik, efisien untuk dataset besar.
 - Kekurangan: Tidak dapat menangani hubungan yang kompleks.
+- Alasan penggunaan: Dipilih karena kemudahannya dalam implementasi, memiliki interpretasi yang baik, dan efisien untuk dataset besar. Namun, model ini tidak dapat menangani hubungan yang kompleks, sehingga cocok digunakan untuk kasus dengan hubungan yang relatif sederhana.
 
 3. Support Vector Machine:
-- Support Vector Machine (SVM) adalah sebuah metode pembelajaran terbimbing yang dapat digunakan untuk klasifikasi, regresi, estimasi densitas, deteksi anomali, dan aplikasi lainnya. Dalam kasus klasifikasi dua kelas yang paling sederhana, SVM mencari sebuah bidang hiper yang memisahkan dua kelas data dengan margin sebesar-besarnya. Hal ini menghasilkan akurasi generalisasi yang baik pada data yang belum dilihat, dan mendukung metode optimisasi khusus yang memungkinkan SVM untuk belajar dari jumlah data yang besar[3](https://link.springer.com/referenceworkentry/10.1007/978-0-387-30164-8_804).
+- Support Vector Machine (SVM) adalah sebuah metode pembelajaran terbimbing yang dapat digunakan untuk klasifikasi, regresi, estimasi densitas, deteksi anomali, dan aplikasi lainnya. Dalam kasus klasifikasi dua kelas yang paling sederhana, SVM mencari sebuah bidang hiper yang memisahkan dua kelas data dengan margin sebesar-besarnya. Hal ini menghasilkan akurasi generalisasi yang baik pada data yang belum dilihat, dan mendukung metode optimisasi khusus yang memungkinkan SVM untuk belajar dari jumlah data yang besar[8](https://link.springer.com/referenceworkentry/10.1007/978-0-387-30164-8_804).
 - Parameter: Kernel (default='rbf'), random_state.
 - Kelebihan: Efektif dalam ruang fitur dengan banyak dimensi, dapat menangani data non-linier.
 - Kekurangan: Membutuhkan waktu komputasi yang lama untuk dataset besar.
+- Alasan penggunaan: Dipilih karena efektif dalam ruang fitur dengan banyak dimensi dan mampu menangani data non-linier. Namun, SVM membutuhkan waktu komputasi yang lama untuk dataset besar.
 
 4. LSTM:
-- LSTM adalah singkatan dari Long Short-Term Memory, yaitu sebuah arsitektur jaringan saraf berulang (RNN) yang dirancang untuk mengatasi masalah gradien yang menghilang dan meledak pada RNN konvensional. Berbeda dengan jaringan saraf maju, RNN memiliki koneksi siklik yang membuatnya kuat untuk memodelkan urutan[4](https://link.springer.com/article/10.1007/s10462-020-09838-1).
+- LSTM adalah singkatan dari Long Short-Term Memory, yaitu sebuah arsitektur jaringan saraf berulang (RNN) yang dirancang untuk mengatasi masalah gradien yang menghilang dan meledak pada RNN konvensional. Berbeda dengan jaringan saraf maju, RNN memiliki koneksi siklik yang membuatnya kuat untuk memodelkan urutan[9](https://link.springer.com/article/10.1007/s10462-020-09838-1).
 - Parameter: Jumlah unit LSTM, dropout rate, batch size, jumlah epoch.
 - Kelebihan: Efektif untuk memahami konteks dalam teks panjang, dapat menangani data sekuen.
 - Kekurangan: Membutuhkan waktu dan sumber daya komputasi yang besar, rentan terhadap overfitting.
+- Alasan penggunaan: Dipilih karena kemampuannya dalam memahami konteks dalam teks panjang dan menangani data sekuen. LSTM cocok digunakan untuk dataset dengan data sekuensial seperti review pelanggan. Namun, model ini membutuhkan waktu dan sumber daya komputasi yang besar serta rentan terhadap overfitting.
 
 ### Proses Improvement dengan Hyperparameter Tuning
 Pada model LSTM, melakukan improvement dengan melakukan hyperparameter tuning. Beberapa langkah yang dilakukan adalah:
@@ -301,13 +305,28 @@ Dari hasil evaluasi di atas, dapat disimpulkan beberapa hal:
 
 Referensi:  
   [1]    
-  [Fadjeri A, Hidayat K, Handayani DR. Deteksi Emosi pada Teks menggunakan Algoritma Naïve Bayes. J Ris Teknol dan Komput. 2021;1(2):1-4. doi:10.53863/juristik.v1i02.365.](https://jurnal.umk.ac.id/index.php/simet/article/view/3487)
+  [Nandwani P, Verma R. A review on sentiment analysis and emotion detection from text. Soc Netw Anal Min. 2021;11(1):1-19. doi:10.1007/s13278-021-00776-6.](https://jurnal.umk.ac.id/index.php/simet/article/view/3487)
 
   [2]  
-  [Cheung AKL. Encyclopedia of Quality of Life and Well-Being.; 2021.](https://link.springer.com/referencework/10.1007/978-3-319-69909-7)
+  [Cheung AKL. Encyclopedia of Quality of Life and Well-Being.; 2021.](https://link.springer.com/article/10.1007/s13278-021-00776-6)
 
   [3]  
+  [8 Sentiment Analysis Real-World Use Cases. https://www.repustate.com/blog/sentiment-analysis-real-world-examples/](https://www.repustate.com/blog/sentiment-analysis-real-world-examples/)
+
+  [4]  
+  [Social Media Sentiment Analysis: Tools, Tips, and More. https://blog.hootsuite.com/social-media-sentiment-analysis-tools/](https://blog.hootsuite.com/social-media-sentiment-analysis-tools/)
+  
+  [5]  
+  [Benrouba F, Boudour R. Emotional sentiment analysis of social media content for mental health safety. Soc Netw Anal Min. 2023;13(1):0-11. doi:10.1007/s13278-022-01000-9.](https://www.semanticscholar.org/paper/Emotional-sentiment-analysis-of-social-media-for-Benrouba-Boudour/89682c3a79487a7af9895eb3067c80fc77804515)
+
+  [6]  
+  [Chandra R, Krishna A. COVID-19 sentiment analysis via deep learning during the rise of novel cases. PLoS One. 2021;16(8 August):1-26. doi:10.1371/journal.pone.0255615.](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255615)
+
+  [7]  
+  [Cheung AKL. Encyclopedia of Quality of Life and Well-Being.; 2021.](https://link.springer.com/referencework/10.1007/978-3-319-69909-7)
+
+  [8]  
   [Sammut C, Webb GI. Front Matter. Encycl Mach Learn. Published online 2011.](https://link.springer.com/referencework/10.1007/978-0-387-30164-8)
 
-  [4]
+  [9]
   [Van Houdt G, Mosquera C, Nápoles G. A review on the long short-term memory model. Artif Intell Rev. 2020;53(8):5929-5955. doi:10.1007/s10462-020-09838-1.](https://link.springer.com/article/10.1007/s10462-020-09838-1)
