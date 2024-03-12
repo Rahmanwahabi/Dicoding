@@ -370,7 +370,7 @@ Pemilihan model terbaik tergantung pada kebutuhan dan preferensi pengguna. Conte
 
 Referensi:  
   [1]    
-  [Beel, J., Gipp, B., Langer, S., & Breitinger, C. (2016). Research-paper recommender systems: a literature survey. International Journal on Digital Libraries, 17(4), 305–338. https://doi.org/10.1007/s00799-015-0156-0.](ttps://link.springer.com/article/10.1007/s00799-015-0156-0)
+  [Beel, J., Gipp, B., Langer, S., & Breitinger, C. (2016). Research-paper recommender systems: a literature survey. International Journal on Digital Libraries, 17(4), 305–338. https://doi.org/10.1007/s00799-015-0156-0.](https://link.springer.com/article/10.1007/s00799-015-0156-0)
 
   [2]  
   [PRASAD, D. M. (2023). Book Recommendation System Using Python. Interantional Journal of Scientific Research in Engineering and Management, 07(07), 39–43. https://doi.org/10.55041/ijsrem24710](https://ijcrt.org/papers/IJCRT2205341.pdf)
